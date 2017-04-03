@@ -28,7 +28,7 @@ function subscribe(Dispatcher $events)
                 ]
             );
             $event->configurator->MediaEmbed->add(
-                'youku',
+                'youku1',
                 [
                     'host'    => 'v.youku.com',
                     'extract' => "!v\\.youku\\.com/v_show/\\id_(?'id'[-0-9A-Z_a-z]+)!",
