@@ -1,20 +1,20 @@
 {
-	"name": "s9e/flarum-ext-mediaembed",
+	"name": "flarumchina/flarum-ext-mediaembed",
 	"description": "Embed third-party content in your Flarum.",
 	"type": "flarum-extension",
 	"keywords": ["flarum","embed","facebook","media","twitter","twitch","youtube"],
-	"version": "0.3.2",
+	"version": "0.3.3",
 	"author": {
 		"name": "JoshyPHP"
 	},
 	"license": "MIT",
 	"require": {
 		"php": ">=5.4.0",
-		"flarum/core": "^0.1.0-beta.3"
+		"flarum/core": "^0.1.0-beta.6"
 	},
 	"support": {
-		"source": "https://github.com/s9e/flarum-ext-mediaembed",
-		"issues": "https://github.com/s9e/flarum-ext-mediaembed/issues"
+		"source": "https://github.com/FlarumChina/flarum-ext-mediaembed",
+		"issues": "https://github.com/FlarumChina/flarum-ext-mediaembed/issues"
 	},
 	"extra": {
 		"flarum-extension": {
