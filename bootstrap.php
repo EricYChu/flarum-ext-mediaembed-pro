@@ -16,17 +16,27 @@ function subscribe(Dispatcher $events)
 		{
             $event->configurator->Autoimage;
             $event->configurator->MediaEmbed->add(
-                'music163',
-                [
-                    'host'    => 'music.163.com',
-                    'extract' => '!music\\.163\\.com/#/(?\'mode\'song|playlist)\\?id=(?\'id\'\\d+)!',
-                    'choose'  => [
-            	    	'when' => [
-            				'test' => '@mode = \'song\'',
-            				'iframe'  => [
-            					'width'  => 380,
-            					'height' => 86,
-            					'src'    => '//music.163.com/outchain/player?type=2&id={@id}&auto=0&height=66'
+            	'music163',
+            	[
+            		'host'    => 'music.163.com',
+            		'extract' => '!music\\.163\\.com/#/(?\'mode\'song|album|playlist)\\?id=(?\'id\'\\d+)!',
+            		'choose'  => [
+            			'when' => [
+            				[
+            					'test' => '@mode = \'album\'',
+            					'iframe'  => [
+            						'width'  => 380,
+            						'height' => 450,
+            						'src'    => '//music.163.com/outchain/player?type=1&id={@id}&auto=0&height=450'
+            					]
+            				],
+            				[
+            					'test' => '@mode = \'song\'',
+            					'iframe'  => [
+            						'width'  => 380,
+            						'height' => 86,
+            						'src'    => '//music.163.com/outchain/player?type=2&id={@id}&auto=0&height=66'
+            					]
             				]
             			],
             			'otherwise' => [
@@ -37,7 +47,7 @@ function subscribe(Dispatcher $events)
             				]
             			]
             		]
-                ]
+               ]
             );
                     
             $event->configurator->MediaEmbed->add(
