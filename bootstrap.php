@@ -54,7 +54,7 @@ function subscribe(Dispatcher $events)
                 'youku',
                 [
                     'host'    => 'v.youku.com',
-                    'extract' => "!v\\.youku\\.com/v_show/\\id_(?'id'[-0-9A-Z_a-z]+)!",
+                    'extract' => '!v\\.youku\\.com/v_show/\\id_(?\'id\'[-0-9A-Z_a-z]+)!',
                     'iframe'  => [
                         'width'  => 720,
                         'height' => 405,
@@ -67,13 +67,14 @@ function subscribe(Dispatcher $events)
                 [   
                     'host'    => 'www.bilibili.com',
                     'extract' => [
-                    	"!www.bilibili.com/video/av(?'id'\\d+)/!",
-                    	"!www.bilibili.com/mobile/video/av(?'id'\\d+)\\.html!"
+                    	'!www\\.bilibili\\.com/video/av(?\'id\'\\d+)!',
+                    	'!www\\.bilibili\\.com/mobile/video/av(?\'id\'\\d+)\\.html!'
                     ],
                     'iframe'  => [
                         'width'  => 760,
                         'height' => 450,
-                        'src'    => '//www.bilibili.com/html/player.html?aid={@id}&as_wide=1'
+//                        'src'    => '//www.bilibili.com/html/player.html?aid={@id}&as_wide=1'
+                        'src'    => '//player.bilibili.com/player.html?aid={@id}&page=1'
                     ]
                 ]
             );
